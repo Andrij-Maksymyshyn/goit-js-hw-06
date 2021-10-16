@@ -9,11 +9,17 @@ const ingredients = [
 
 
 const menuIngredients = document.querySelector('#ingredients');
+const menu = [];
+
 
 ingredients.forEach((option) => {
   const ingredientItem = document.createElement('li');
   ingredientItem.textContent = option;
   ingredientItem.classList.add('item');
-  menuIngredients.append(ingredientItem);
-});
+  menu.push(ingredientItem);  
+   });
+   
+ 
+menuIngredients.append(...menu);
 console.log(menuIngredients);
+

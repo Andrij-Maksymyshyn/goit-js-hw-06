@@ -7,11 +7,16 @@ const mustHave = document.querySelector('input[data-length="6"]');
 entance.addEventListener("blur", (event) => {
     if (event.currentTarget.value.length === Number(mustHave.dataset.length)) {        
   
-        return result.style.borderColor = "#4caf50";
-              
-    }    
+      result.classList.remove('invalid');      
+      result.classList.add('valid');       
+                          
+    } else {   
     
-        return result.style.borderColor = "#f44336";
-    
+            result.classList.remove('valid');
+            result.classList.add('invalid');
+    }
+
 });
+
+
 

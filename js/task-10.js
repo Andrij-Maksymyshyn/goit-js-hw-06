@@ -10,6 +10,7 @@ const result = document.querySelector('#boxes');
 
 const createBoxes = (amount) => {
   amount = input.value;
+  
 
   for (let i = 0; i < amount; i += 1) {
     const basicSize = 30;
@@ -17,7 +18,7 @@ const createBoxes = (amount) => {
     const box = document.createElement('div');
     box.setAttribute(
       'style',
-      `width:${biggestSize}px, height:${biggestSize}px, background-color:${getRandomHexColor()}`
+      `width: ${biggestSize}px; height: ${biggestSize}px; background-color: ${getRandomHexColor()}`
     );
 
     result.append(box);
